@@ -66,3 +66,29 @@ function validateSignupForm() {
 		return true;
 	}
 }
+$(document).ready(function() {
+	$("#p1").hide();
+	$("#img1").click(function() {
+	  $("#p1").toggle();
+	})
+ 
+  })
+  $(document).ready(function() {
+	 $("#p2").hide();
+	 $("#img2").click(function() {
+	   $("#p2").toggle();
+	 })
+  })
+  $(document).ready(function() {
+	 $("#p3").hide();
+	 $("#img3").click(function() {
+	   $("#p3").toggle();
+	 })
+  })
+  $(document).ready(function() {
+	 $("#p4").hide();
+	 $("#img4").click(function() {
+	   $("#p4").toggle();
+	 })
+  })
+ 
