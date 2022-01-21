@@ -160,6 +160,7 @@ input[type=checkbox]{
 .contact{
     background-color: rgb(177, 176, 176);
     padding-top: 1%;
+    height: 272px;
 
 
 }
@@ -192,4 +193,29 @@ font-size: 30px;
 .img4{
     padding-left: 10%;
     height: 50px;
+}
+.main{
+    background-image: url("conatct.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 468px;
+    background-position: center;
+
+}
+.h1{
+    color: white;
+    font-style:serif;
+    padding-left: 33%;
+}
+.c1{
+    color: white;
+    padding-left: 30%;
+}
+.c2{
+    color: white;
+    padding-left: 43%;
+}
+.c3{
+    color: white;
+    padding-left: 31%;
 }

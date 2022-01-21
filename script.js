@@ -1,4 +1,93 @@
-//read more 
+$(document).ready(function() {
+	$("#p1").hide();
+	$("#img1").click(function() {
+	  $("#p1").toggle();
+	})
+ 
+  });
+  $(document).ready(function() {
+	 $("#p2").hide();
+	 $("#img2").click(function() {
+	   $("#p2").toggle();
+	 })
+  });
+  $(document).ready(function() {
+	 $("#p3").hide();
+	 $("#img3").click(function() {
+	   $("#p3").toggle();
+	 })
+  });
+  $(document).ready(function() {
+	 $("#p4").hide();
+	 $("#img4").click(function() {
+	   $("#p4").toggle();
+	 });
+  });
+const form = document.querySelector("#cont");
+const input = "https://www.youtube.com/watch?v=4KTB0MPHHrg"
+function validate(){
+	form.addEventListener("submit", function(button){
+		button.preventDefault();
+		const jsform = new FormData(form);
+		if(jsform.get("username") == "kelicaleb" && jsform.get("password") == "123"){
+			Swal.fire({
+				position: 'top-end',
+				icon: 'success',
+				title: 'Your have been subscribed',
+				showConfirmButton: false,
+				timer: 1500
+			  })
+			
+		}
+		else if(jsform.get("username") == "Hilary" && jsform.get("password") == "123"){
+			Swal.fire({
+				position: 'top-end',
+				icon: 'success',
+				title: 'Your have been subscribed',
+				showConfirmButton: false,
+				timer: 1500
+			  })
+		}
+		else{
+			Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'You have not been subscribed !',
+			  })
+		}
+	
+	})
+}
+const fom = document.querySelector("#control")
+fom.addEventListener("submit", function(btn){
+	btn.preventDefault();
+	const jsform = new FormData(fom)
+	if(jsform.get("email") && jsform.get("email") && jsform.get("password")){
+		Swal.fire({
+            title: 'Click save to save in your deatils ' ,
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Save',
+            denyButtonText: `Don't save`,
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire('Saved!', 'Your details have been succesfully saved!', 'success')
+            } else if (result.isDenied) {
+              Swal.fire('Changes are not saved', '', 'info')
+            }
+	    })
+	}
+	else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ensure all fields are filled !',
+          })
+    }
+	
+})
+
+	
 function myFunction() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
@@ -29,66 +118,3 @@ $(window).on("hashchange", function () {
 });
 $(window).trigger("hashchange");
 
-function validateLoginForm() {
-	var name = document.getElementById("logName").value;
-	var password = document.getElementById("logPassword").value;
-
-	if (name == "" || password == "") {
-		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
-		return false;
-	}
-
-	else if (password.length < 8) {
-		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
-		return false;
-	}
-	else {
-		alert("Successfully logged in");
-		return true;
-	}
-}
-function validateSignupForm() {
-	var mail = document.getElementById("signEmail").value;
-	var name = document.getElementById("signName").value;
-	var password = document.getElementById("signPassword").value;
-
-	if (mail == "" || name == "" || password == "") {
-		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
-		return false;
-	}
-
-	else if (password.length < 8) {
-		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
-		return false;
-	}
-	else {
-		alert("Successfully signed up");
-		return true;
-	}
-}
-$(document).ready(function() {
-	$("#p1").hide();
-	$("#img1").click(function() {
-	  $("#p1").toggle();
-	})
- 
-  })
-  $(document).ready(function() {
-	 $("#p2").hide();
-	 $("#img2").click(function() {
-	   $("#p2").toggle();
-	 })
-  })
-  $(document).ready(function() {
-	 $("#p3").hide();
-	 $("#img3").click(function() {
-	   $("#p3").toggle();
-	 })
-  })
-  $(document).ready(function() {
-	 $("#p4").hide();
-	 $("#img4").click(function() {
-	   $("#p4").toggle();
-	 })
-  })
- 
